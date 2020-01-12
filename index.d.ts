@@ -18308,6 +18308,15 @@ export module mxgraph {
         */
     export class mxEditor extends mxEventSource {
         constructor(config: any);
+
+        /**
+         * Variable: graph
+         *
+         * Holds a <mxGraph> for displaying the diagram. The graph
+         * is created in <setGraphContainer>.
+         */
+        graph: mxGraph;
+        
         /**
             * Returns <modified>.
             */
