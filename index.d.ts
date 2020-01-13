@@ -3203,6 +3203,12 @@ export module mxgraph {
     export class mxDragSource {
         constructor(element: any, dropHandler: any);
         /**
+         * Variable: autoscroll
+         *
+         * Specifies if the graph should scroll automatically. Default is true.
+         */
+        autoscroll: boolean;
+        /**
             * Returns <enabled>.
             */
         isEnabled(): any;
