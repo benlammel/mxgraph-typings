@@ -10489,6 +10489,9 @@ export module mxgraph {
             * Default is 25 pixels.
             */
         doubleTapTolerance: number;
+
+        lastEvent: any
+
         /**
             * Holds the x-coordinate of the last touch event for double tap detection.
             */
