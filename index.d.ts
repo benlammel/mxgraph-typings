@@ -10490,6 +10490,9 @@ export module mxgraph {
             */
         doubleTapTolerance: number;
 
+        /**
+         * Holds several coordinates of the last event
+         */
         lastEvent: any
 
         /**
