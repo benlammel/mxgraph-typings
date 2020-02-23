@@ -5728,7 +5728,7 @@ export module mxgraph {
          * Current iteration count.
          */
         iteration: number;
-        
+
         /**
          * An array of all vertices to be laid out.
          */
@@ -16715,6 +16715,79 @@ export module mxgraph {
         */
     export class mxEdgeHandler {
         constructor(state: any);
+
+        /* Reference to the enclosing mxGraph. */
+        graph: any;
+
+        /* Reference to the mxCellState being modified. */
+        state: any;
+
+        /* Holds the <mxTerminalMarker> which is used for highlighting terminals. */
+        marker: any;
+
+        /* Holds the mxConstraintHandler used for drawing and highlighting constraints.*/
+        constraintHandler: any;
+
+        /* Holds the current validation error while a connection is being changed.*/
+        error: any;
+
+        /* Holds the mxShape that represents the preview edge.*/
+        shape: any;
+
+        /* Holds the mxShapes that represent the points. */
+        bends: any;
+
+        /* Holds the mxShape that represents the label position.*/
+        labelShape: any;
+
+        /* Specifies if cloning by control-drag is enabled.*/
+        cloneEnabled: boolean;
+
+        /* Specifies if adding bends by shift-click is enabled. */
+        addEnabled: boolean;
+
+        /* Specifies if removing bends by shift-click is enabled. */
+        removeEnabled: boolean;
+
+        /* Specifies if removing bends by double click is enabled.*/
+        dblClickRemoveEnabled: boolean;
+
+        /* Specifies if removing bends by dropping them on other bends is enabled.*/
+        mergeRemoveEnabled: boolean;
+
+        /* Specifies if removing bends by creating straight segments should be enabled. */
+        straightRemoveEnabled: boolean;
+
+        /* Specifies if virtual bends should be added in the center of each segments. */
+        virtualBendsEnabled: boolean;
+
+        /* Opacity to be used for virtual bends (see virtualBendsEnabled). */
+        virtualBendOpacity: number;
+
+        /* Specifies if the parent should be highlighted if a child cell is selected.*/
+        parentHighlightEnabled: boolean;
+
+        /* Specifies if bends should be added to the graph container. */
+        preferHtml: boolean;
+
+        /* Specifies if the bounds of handles should be used for hit-detection in IE Default is true. */
+        allowHandleBoundsCheck: boolean;
+
+        /* Specifies if waypoints should snap to the routing centers of terminals. */
+        snapToTerminals: boolean;
+
+        /* Optional mxImage to be used as handles. */
+        handleImage: any;
+
+        /* Optional tolerance for hit-detection in getHandleForEvent. */
+        tolerance: number;
+
+        /* Specifies if connections to the outline of a highlighted target should be enabled. */
+        outlineConnect: boolean;
+
+        /* Specifies if the label handle should be moved if it intersects with another handle. */
+        manageLabelHandle: boolean;
+
         /**
             * Initializes the shapes required for this edge handler.
             */
@@ -18319,7 +18392,7 @@ export module mxgraph {
          * is created in <setGraphContainer>.
          */
         graph: mxGraph;
-        
+
         /**
             * Returns <modified>.
             */
